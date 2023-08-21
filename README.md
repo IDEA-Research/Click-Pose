@@ -3,11 +3,12 @@ This is the official pytorch implementation of our ICCV 2023 paper "Neural Inter
 
 [Jie Yang](https://github.com/yangjie-cv), [Ailing Zeng](https://ailingzeng.site/), [Feng Li](https://scholar.google.com/citations?user=ybRe9GcAAAAJ&hl=zh-CN), [Shilong Liu](http://www.lsl.zone/), [Ruimao Zhang](http://www.zhangruimao.site/), [Lei Zhang](https://www.leizhang.org/)
 
-#### Work flow: 🤖 Model localizes all keypoints -> 👨 User corrects a few wrong keypoints -> 🤖 Model refines other keypoints
 **Keywords**: 👯 Multi-person 2D pose estimation, 💃 Human-in-the-loop, 🤝Interactive model 
 
 ## ❤️ Highlights
 - Click-Pose has been supported in our **[DeepDataSpace](https://github.com/IDEA-Research/deepdataspace)** platform. See details for *How to perform intelligent labeling with DDS [here](https://docs.deepdataspace.com/tutorials/ai-annotation.html).*
+
+- #### Work flow: 🤖 Model localizes all keypoints -> 👨 User corrects a few wrong keypoints -> 🤖 Model refines other keypoints
 
 <img src="assets/dds_kpt.gif" />  
 
@@ -19,6 +20,8 @@ This is the official pytorch implementation of our ICCV 2023 paper "Neural Inter
 - 👇 We present the first neural interactive keypoint detection framework, Click-Pose, an end-to-end baseline to annotate multi-person 2D keypoints given an image. 
 <img src="assets/framework_clickpose.jpg" />  
 
+- 👇 Click-Pose is more than **10** times faster than manual annotation. Importantly, it significantly alleviates model bias in out-of-domain annotation (e.g., on Human-Art), reducing the time required by **83%** compared to state-of-the-art model annotation ([ViTPose](https://github.com/ViTAE-Transformer/ViTPose)) with manual correction.
+<img src="assets/cost.jpg" />
 
 ## ▶ Demo
 #### In-Domain Annotation (e.g., on COCO)
