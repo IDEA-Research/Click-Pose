@@ -1,39 +1,39 @@
 # Neural Interactive Keypoint Detection
-
-<img src="assets/main_clickpose.jpg" />  
+This is the official pytorch implementation of our ICCV 2023 paper "Neural Interactive Keypoint Detection." 
 
 [Jie Yang](https://github.com/yangjie-cv), [Ailing Zeng](https://ailingzeng.site/), [Feng Li](https://scholar.google.com/citations?user=ybRe9GcAAAAJ&hl=zh-CN), [Shilong Liu](http://www.lsl.zone/), [Ruimao Zhang](http://www.zhangruimao.site/), [Lei Zhang](https://www.leizhang.org/)
-
-This is the official pytorch implementation of our ICCV 2023 paper "Neural Interactive Keypoint Detection". 
-
-## 💡 Click-Pose
-
-<img src="assets/framework_clickpose.jpg" />  
-
-- #### We first propose interactive keypoint detection task towards efficient keypoint annotation.
-
-- #### We present the first neural interactive keypoint detection framework, Click-Pose, as a baseline for further research. 
-## ▶ Demo
 
 #### Operation Flow: 🤖 Model localizes all keypoints ➡ 👨 User corrects a few wrong keypoints ➡ 🤖 Model refines other keypoints
 
 
-#### In-Domain Annotation
+## ❤️ Highlights
+- Click-Pose has been supported in our **[DeepDataSpace](https://github.com/IDEA-Research/deepdataspace)** platform. See details for *How to perform intelligent labeling with DDS [here](https://docs.deepdataspace.com/tutorials/ai-annotation.html).*
+
+<img src="assets/dds_kpt.gif" />  
+
+## 💡 Click-Pose
+
+- We first propose an **interactive keypoint detection task** for efficient keypoint annotation.
+<img src="assets/main_clickpose.jpg" />
+
+- We present the first neural interactive keypoint detection framework, Click-Pose, an end-to-end baseline to annotate multi-person 2D keypoints given an image. 
+<img src="assets/framework_clickpose.jpg" />  
+
+
+## ▶ Demo
+#### In-Domain Annotation (e.g., on COCO)
 <img src="assets/In-domain.gif" />  
 
 ```
 Given a natural multi-person scene, we first utilize our model first obtains the predicted keypoints and human boxes. By setting a classification score threshold to 0.1, we can obtain these candidate detections. Here, the candidate poses are sorted in descending order of their classification scores. We check the first candidate. Its keypoints and human boxes are almost correct. For the second one, we can see that the network predicted this person’s pose in reverse. This should be the person's right side, but the model predicts it as the left side. Thus, we provide feedback by correcting one keypoint, such as moving the left elbow to the correct position, and then feed this modified pose back to our model. As a result, our model can output the refined predicted keypoints and human boxes. We check the new candidate detections. We first notice that our model changes the classification scores of the previous predictions. By setting a classification score threshold to 0.1, we can filter out more inaccurate candidates. And now, the person candidate that we corrected has the highest classification score. Then, we can observe that for this person, the network realizes the flipping error based on our modification of the left elbow position, and subsequently refines the positions of all other keypoints, resulting in an accurate pose.
 ```
 
-
-#### Out-of-Domain Annotation
+#### Out-of-Domain Annotation (e.g., on Human-Art)
 <img src="assets/Out-of-domain.gif" />  
 
 ```
 Given an out-of-domain artificial scene, we also obtain the predicted pose and human boxes. However, since this is out-of-domain data, the model cannot provide an accurate pose. We correct the left ankle to the correct position and use the model to refine the predictions. We observe that the network now outputs the correct pose and human box.
 ```
-
-
 
 ## 🚀 Model Zoo
 
