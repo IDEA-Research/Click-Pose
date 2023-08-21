@@ -43,21 +43,21 @@ Given an out-of-domain artificial scene, we also obtain the predicted pose and h
 
 |   Model    | Backbone  | Lr schd | mAP  | AP<sup>50</sup> | AP<sup>75</sup> | AP<sup>M</sup> | AP<sup>L</sup> | Time (ms) |                                                 Model                                                 |
 |:----------:|:---------:|:-------:|:----:|:---------------:|:---------------:|:--------------:|:--------------:|:---------:|:-----------------------------------------------------------------------------------------------------:|
-|  ED-Pose   | ResNet-50 |   60e   | 71.7 |      89.7       |      78.8       |      66.2      |      79.7      |    51     |                          [GitHub](https://github.com/IDEA-Research/ED-Pose)                           |
+|  ED-Pose   | ResNet-50 |   60e   | 71.7 |      89.7       |      78.8       |      66.2      |      79.7      |    51     |                          [GitHub](https://github.com/IDEA-Research/ED-Pose), [Model](https://drive.google.com/file/d/1Q5OpZeCvaSgqC0NlKeRiJFmHBtusxnjX/view?usp=sharing)                        |
 | Click-Pose |   ResNet-50    |   40e   | 73.0 |      90.4       |      80.0       |      68.1      |      80.5      |    48     | [Google Drive](https://drive.google.com/file/d/1_rp12m0fkpSc7LQ1oXeifdt8SbwcSHtS/view?usp=sharing) |
 
 #### Human-Art val set
 
 |   Model    |   Backbone     | mAP  | AP<sup>M</sup> | AP<sup>L</sup> |                                           Model                                                |
 |:----------:|:-------------:|:----:|:--------------:|:--------------:|:-----------------------------------------------------------------------------------------------------:|
-|  ED-Pose   |     ResNet-50        | 37.5 |      7.6       |      41.1      |     [GitHub](https://github.com/IDEA-Research/ED-Pose)      |
+|  ED-Pose   |     ResNet-50        | 37.5 |      7.6       |      41.1      |    [GitHub](https://github.com/IDEA-Research/ED-Pose), [Model](https://drive.google.com/file/d/1Q5OpZeCvaSgqC0NlKeRiJFmHBtusxnjX/view?usp=sharing)          |
 | Click-Pose |    ResNet-50       | 40.5 |      8.3       |      44.2      | [Google Drive](https://drive.google.com/file/d/1_rp12m0fkpSc7LQ1oXeifdt8SbwcSHtS/view?usp=sharing) |
 
 #### OCHuman test set
 
 |   Model    |   Backbone     | mAP  | AP<sup>50</sup> | AP<sup>75</sup> |                                           Model                                                |
 |:----------:|:-------------:|:----:|:---------------:|:---------------:|:-----------------------------------------------------------------------------------------------------:|
-|  ED-Pose   |     ResNet-50        | 31.4 |      39.5       |      35.1       |     [GitHub](https://github.com/IDEA-Research/ED-Pose)      |
+|  ED-Pose   |     ResNet-50        | 31.4 |      39.5       |      35.1       |    [GitHub](https://github.com/IDEA-Research/ED-Pose), [Model](https://drive.google.com/file/d/1Q5OpZeCvaSgqC0NlKeRiJFmHBtusxnjX/view?usp=sharing)          |
 | Click-Pose |    ResNet-50       | 33.9 |      43.4       |      37.5       | [Google Drive](https://drive.google.com/file/d/1_rp12m0fkpSc7LQ1oXeifdt8SbwcSHtS/view?usp=sharing) |
 
 Note that the model is trained on COCO train2017 set and tested on COCO val2017 set, Human-Art val set, and OCHuman test set.
@@ -68,7 +68,7 @@ Note that the model is trained on COCO train2017 set and tested on COCO val2017 
 
 |   Model    |   Backbone     | NoC@85 | NoC@90 | NoC@95 |                                           Model                                                |
 |:----------:|:-------------:|:------:|:------:|:------:|:-----------------------------------------------------------------------------------------------------:|
-|  ViTPose   |     ResNet-50        |  1.46  |  2.15  |  2.87  |     [GitHub](https://github.com/ViTAE-Transformer/ViTPose)      |
+|  ViTPose   |     ResNet-50        |  1.46  |  2.15  |  2.87  |     [GitHub](https://github.com/ViTAE-Transformer/ViTPose), [Model](https://1drv.ms/u/s!AimBgYV7JjTlgShLMI-kkmvNfF_h?e=dEhGHe)      |
 | Click-Pose |    ResNet-50       |  0.95  |  1.48  |  1.97  | [Google Drive](https://drive.google.com/file/d/184RIVxFVrDho4Nw5Yquh6fedTKpsZVYX/view?usp=sharing) |
 
 
@@ -77,7 +77,7 @@ Note that the model is trained on COCO train2017 set and tested on COCO val2017 
 
 |   Model    |   Backbone     | NoC@85 | NoC@90 | NoC@95 |                                           Model                                                |
 |:----------:|:-------------:|:------:|:------:|:------:|:-----------------------------------------------------------------------------------------------------:|
-|  ViTPose   |     ResNet-50        |  9.12  |  9.79  | 10.13  |     [GitHub](https://github.com/ViTAE-Transformer/ViTPose)      |
+|  ViTPose   |     ResNet-50        |  9.12  |  9.79  | 10.13  |     [GitHub](https://github.com/ViTAE-Transformer/ViTPose), [Model](https://1drv.ms/u/s!AimBgYV7JjTlgShLMI-kkmvNfF_h?e=dEhGHe)     |
 | Click-Pose |    ResNet-50       |  4.82  |  5.81  |  6.45  | [Google Drive](https://drive.google.com/file/d/184RIVxFVrDho4Nw5Yquh6fedTKpsZVYX/view?usp=sharing) |
 
 
@@ -399,9 +399,24 @@ done
 
 
 ### Cite Click-Pose
+If you find this repository useful for your work, please consider citing it as follows:
 
-```angular2html
+```
+@inproceedings{yang2023nerual,
+  title={Neural Interactive Keypoint Detection},
+  author={Yang, Jie and Zeng, Ailing and Li, Feng and Liu, Shilong and Zhang, Ruimao and Zhang, Lei},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  year={2023}
+}
+```
 
+```
+@inproceedings{yang2022explicit,
+  title={Explicit Box Detection Unifies End-to-End Multi-Person Pose Estimation},
+  author={Yang, Jie and Zeng, Ailing and Liu, Shilong and Li, Feng and Zhang, Ruimao and Zhang, Lei},
+  booktitle={The Eleventh International Conference on Learning Representations},
+  year={2022}
+}
 ```
 
 
