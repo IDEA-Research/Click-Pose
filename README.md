@@ -21,7 +21,7 @@ This is the official pytorch implementation of our ICCV 2023 paper "Neural Inter
 <img src="assets/framework_clickpose.jpg" />  
 
 - 👇 Click-Pose is more than **10** times faster than manual annotation. Importantly, it significantly alleviates model bias in out-of-domain annotation (e.g., on Human-Art), reducing the time required by **83%** compared to state-of-the-art model annotation ([ViTPose](https://github.com/ViTAE-Transformer/ViTPose)) with manual correction.
-<img src="assets/cost.jpg" />
+<img src="assets/cost.png" style="height:300px"/>
 
 ## ▶ Demo
 #### In-Domain Annotation (e.g., on COCO)
