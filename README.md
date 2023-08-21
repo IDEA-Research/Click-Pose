@@ -7,8 +7,8 @@ This is the official pytorch implementation of our ICCV 2023 paper "Neural Inter
 
 ## ❤️ Highlights
 - Click-Pose has been supported in our **[DeepDataSpace](https://github.com/IDEA-Research/deepdataspace)** platform. See details for *How to perform intelligent labeling with DDS [here](https://docs.deepdataspace.com/tutorials/ai-annotation.html).*
-
-- #### Work flow: 🤖 Model localizes all keypoints -> 👨 User corrects a few wrong keypoints -> 🤖 Model refines other keypoints
+- All models for COCO, Human-Art, OCHuman, and CrowdPose are released! 
+- **Work flow**: 🤖 Model localizes all keypoints -> 👨 User corrects a few wrong keypoints -> 🤖 Model refines other keypoints
 
 <img src="assets/dds_kpt.gif" />  
 
