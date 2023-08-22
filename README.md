@@ -1,5 +1,5 @@
 # Neural Interactive Keypoint Detection
-This is the official pytorch implementation of our ICCV 2023 paper "Neural Interactive Keypoint Detection." 
+This is the official pytorch implementation of our ICCV 2023 paper "[Neural Interactive Keypoint Detection](https://arxiv.org/pdf/2308.10174.pdf)." 
 
 [Jie Yang](https://github.com/yangjie-cv), [Ailing Zeng](https://ailingzeng.site/), [Feng Li](https://scholar.google.com/citations?user=ybRe9GcAAAAJ&hl=zh-CN), [Shilong Liu](http://www.lsl.zone/), [Ruimao Zhang](http://www.zhangruimao.site/), [Lei Zhang](https://www.leizhang.org/)
 
@@ -23,13 +23,6 @@ This is the official pytorch implementation of our ICCV 2023 paper "Neural Inter
 - 👇 Click-Pose is more than **10** times faster than manual annotation. Importantly, it significantly alleviates model bias in out-of-domain annotation (e.g., on Human-Art), reducing the time required by **83%** compared to state-of-the-art model annotation ([ViTPose](https://github.com/ViTAE-Transformer/ViTPose)) with manual correction.
 <img src="assets/cost.png" style="height:300px"/>
 
-## ▶ Demo
-#### In-Domain Annotation (e.g., on COCO)
-<img src="assets/In-domain.gif" />  
-
-
-#### Out-of-Domain Annotation (e.g., on Human-Art)
-<img src="assets/Out-of-domain.gif" />  
 
 
 
