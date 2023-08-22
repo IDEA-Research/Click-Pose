@@ -59,7 +59,7 @@ Note that the model is trained on COCO train2017 set and tested on COCO val2017 
 
 |   Model    |   Backbone     | NoC@85 | NoC@90 | NoC@95 |                                           Model                                                |
 |:----------:|:-------------:|:------:|:------:|:------:|:-----------------------------------------------------------------------------------------------------:|
-|  ViTPose   |     ResNet-50        |  1.46  |  2.15  |  2.87  |     [GitHub](https://github.com/ViTAE-Transformer/ViTPose), [Model](https://1drv.ms/u/s!AimBgYV7JjTlgShLMI-kkmvNfF_h?e=dEhGHe)      |
+|  ViTPose   |     ViT-Huge        |  1.46  |  2.15  |  2.87  |     [GitHub](https://github.com/ViTAE-Transformer/ViTPose), [Model](https://1drv.ms/u/s!AimBgYV7JjTlgShLMI-kkmvNfF_h?e=dEhGHe)      |
 | Click-Pose |    ResNet-50       |  0.95  |  1.48  |  1.97  | [Google Drive](https://drive.google.com/file/d/184RIVxFVrDho4Nw5Yquh6fedTKpsZVYX/view?usp=sharing) |
 
 
@@ -68,7 +68,7 @@ Note that the model is trained on COCO train2017 set and tested on COCO val2017 
 
 |   Model    |   Backbone     | NoC@85 | NoC@90 | NoC@95 |                                           Model                                                |
 |:----------:|:-------------:|:------:|:------:|:------:|:-----------------------------------------------------------------------------------------------------:|
-|  ViTPose   |     ResNet-50        |  9.12  |  9.79  | 10.13  |     [GitHub](https://github.com/ViTAE-Transformer/ViTPose), [Model](https://1drv.ms/u/s!AimBgYV7JjTlgShLMI-kkmvNfF_h?e=dEhGHe)     |
+|  ViTPose   |     ViT-Huge        |  9.12  |  9.79  | 10.13  |     [GitHub](https://github.com/ViTAE-Transformer/ViTPose), [Model](https://1drv.ms/u/s!AimBgYV7JjTlgShLMI-kkmvNfF_h?e=dEhGHe)     |
 | Click-Pose |    ResNet-50       |  4.82  |  5.81  |  6.45  | [Google Drive](https://drive.google.com/file/d/184RIVxFVrDho4Nw5Yquh6fedTKpsZVYX/view?usp=sharing) |
 
 
