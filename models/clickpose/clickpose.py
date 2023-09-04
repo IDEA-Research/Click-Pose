@@ -298,7 +298,7 @@ class ClickPose(nn.Module):
 
         if self.dn_kpt_label_noise_ratio > 0:
             prob_pose = torch.rand_like(knwon_keypoints_label_expand.float())
-            chosen_indice_pose = prob_pose < dn_label_noise_ratio
+            chosen_indice_pose = prob_pose < self.dn_kpt_label_noise_ratio
             new_label_pose = torch.randint_like(knwon_keypoints_label_expand[chosen_indice_pose], 0, self.num_body_points)
             knwon_keypoints_label_expand[chosen_indice_pose] = new_label_pose
 
