@@ -468,15 +468,15 @@ class ClickPose(nn.Module):
                 )
                 from pycocotools.coco import COCO
                 from pycocotools.cocoeval import COCOeval
-                # if os.environ.get("CLICKPOSE_COCO_PATH"):
-                #     COCO_PATH = os.environ.get("CLICKPOSE_COCO_PATH")
-                #     cocodir = COCO_PATH + '/annotations/person_keypoints_val2017.json'
-                # elif os.environ.get("CLICKPOSE_HumanArt_PATH"):
-                #     COCO_PATH = os.environ.get("CLICKPOSE_HumanArt_PATH")
-                #     cocodir = COCO_PATH + "HumanArt/annotations/validation_humanart.json"
-                # elif os.environ.get("CLICKPOSE_OCHuman_PATH"):
-                COCO_PATH = os.environ.get("CLICKPOSE_OCHuman_PATH")
-                cocodir = COCO_PATH + '/annotations/ochuman_coco_format_test_range_0.00_1.00.json'
+                if os.environ.get("CLICKPOSE_COCO_PATH"):
+                    COCO_PATH = os.environ.get("CLICKPOSE_COCO_PATH")
+                    cocodir = COCO_PATH + '/annotations/person_keypoints_val2017.json'
+                elif os.environ.get("CLICKPOSE_HumanArt_PATH"):
+                    COCO_PATH = os.environ.get("CLICKPOSE_HumanArt_PATH")
+                    cocodir = COCO_PATH + "HumanArt/annotations/validation_humanart.json"
+                elif os.environ.get("CLICKPOSE_OCHuman_PATH"):
+                    COCO_PATH = os.environ.get("CLICKPOSE_OCHuman_PATH")
+                    cocodir = COCO_PATH + '/annotations/ochuman_coco_format_test_range_0.00_1.00.json'
                 coco = COCO(cocodir)
                 cocoDt = coco.loadRes(coco_results)
                 cocoEval = COCOeval(coco, cocoDt, "keypoints")
