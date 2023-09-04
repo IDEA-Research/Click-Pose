@@ -238,6 +238,7 @@ export CLICKPOSE_COCO_PATH=/path/to/your/coco_dir
 ```
 export CLICKPOSE_COCO_PATH=/path/to/your/coco_dir
 export CLICKPOSE_NoC_Test="TRUE"
+export NoC_thr = 0.95
     python -m torch.distributed.launch --nproc_per_node=4 --master_port 3458 main.py \
     --output_dir "logs/ClickPose_Neural_Interactive_eval" \
     -c config/clickpose.cfg.py \
@@ -296,6 +297,7 @@ export CLICKPOSE_HumanArt_PATH=/path/to/your/humanart_dir
 ```
 export CLICKPOSE_HumanArt_PATH=/path/to/your/humanart_dir
 export CLICKPOSE_NoC_Test="TRUE"
+export NoC_thr = 0.95
     python -m torch.distributed.launch --nproc_per_node=4 --master_port 3458 main.py \
     --output_dir "logs/ClickPose_Neural_Interactive_eval" \
     -c config/clickpose.cfg.py \
@@ -353,7 +355,8 @@ export CLICKPOSE_OCHuman_PATH=/path/to/your/ochuman_dir
 
 ```
 export CLICKPOSE_OCHuman_PATH=/path/to/your/ochuman_dir
-export CLICKPOSE_NoC_Test="TRUE"
+export CLICKPOSE_NoC_Test = "TRUE"
+export NoC_thr = 0.95
     python -m torch.distributed.launch --nproc_per_node=4 --master_port 3458 main.py \
     --output_dir "logs/ClickPose_Neural_Interactive_eval" \
     -c config/clickpose.cfg.py \
