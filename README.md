@@ -238,11 +238,12 @@ export CLICKPOSE_COCO_PATH=/path/to/your/coco_dir
 ```
 export CLICKPOSE_COCO_PATH=/path/to/your/coco_dir
 export CLICKPOSE_NoC_Test="TRUE"
+export CLICKPOSE_SAVE_PATH = "./NoC_95_coco.json"
 export NoC_thr = 0.95
-    python -m torch.distributed.launch --nproc_per_node=4 --master_port 3458 main.py \
+    python -m torch.distributed.launch --nproc_per_node=1 --master_port 3458 main.py \
     --output_dir "logs/ClickPose_Neural_Interactive_eval" \
     -c config/clickpose.cfg.py \
-    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=TRUE feedback_inference=TRUE only_correction=FALSE num_select=20 \
+    --options batch_size=1 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=TRUE feedback_inference=TRUE only_correction=FALSE num_select=20 \
     --dataset_file="coco" \
     --pretrain_model_path "./models/ClickPose_interactive_R50.pth" \
     --eval
@@ -297,11 +298,12 @@ export CLICKPOSE_HumanArt_PATH=/path/to/your/humanart_dir
 ```
 export CLICKPOSE_HumanArt_PATH=/path/to/your/humanart_dir
 export CLICKPOSE_NoC_Test="TRUE"
+export CLICKPOSE_SAVE_PATH = "./NoC_95_humanart.json"
 export NoC_thr = 0.95
-    python -m torch.distributed.launch --nproc_per_node=4 --master_port 3458 main.py \
+    python -m torch.distributed.launch --nproc_per_node=1 --master_port 3458 main.py \
     --output_dir "logs/ClickPose_Neural_Interactive_eval" \
     -c config/clickpose.cfg.py \
-    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=TRUE feedback_inference=TRUE only_correction=FALSE num_select=20 \
+    --options batch_size=1 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=TRUE feedback_inference=TRUE only_correction=FALSE num_select=20 \
     --dataset_file="humanart" \
     --pretrain_model_path "./models/ClickPose_interactive_R50.pth" \
     --eval
@@ -356,11 +358,12 @@ export CLICKPOSE_OCHuman_PATH=/path/to/your/ochuman_dir
 ```
 export CLICKPOSE_OCHuman_PATH=/path/to/your/ochuman_dir
 export CLICKPOSE_NoC_Test = "TRUE"
+export CLICKPOSE_SAVE_PATH = "./NoC_95_ochuman.json"
 export NoC_thr = 0.95
-    python -m torch.distributed.launch --nproc_per_node=4 --master_port 3458 main.py \
+    python -m torch.distributed.launch --nproc_per_node=1 --master_port 3458 main.py \
     --output_dir "logs/ClickPose_Neural_Interactive_eval" \
     -c config/clickpose.cfg.py \
-    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=TRUE feedback_inference=TRUE only_correction=FALSE num_select=20 \
+    --options batch_size=1 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=TRUE feedback_inference=TRUE only_correction=FALSE num_select=20 \
     --dataset_file="ochuman" \
     --pretrain_model_path "./models/ClickPose_interactive_R50.pth" \
     --eval
