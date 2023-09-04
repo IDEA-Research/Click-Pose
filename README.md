@@ -193,8 +193,8 @@ export CLICKPOSE_COCO_PATH=/path/to/your/coco_dir
  python -m torch.distributed.launch --nproc_per_node=4 main.py \
     --output_dir "logs/ClickPose_Model-Only" \
     -c config/clickpose.cfg.py \
-    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=FLASE feedback_loop_NOC_test=FALSE feedback_inference=FALSE only_correction=FALSE
-    --dataset_file="coco"
+    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=FLASE feedback_loop_NOC_test=FALSE feedback_inference=FALSE only_correction=FALSE \
+    --dataset_file="coco" 
 ```
 </details>
 
@@ -207,7 +207,7 @@ export CLICKPOSE_COCO_PATH=/path/to/your/coco_dir
  python -m torch.distributed.launch --nproc_per_node=4 main.py \
     --output_dir "logs/ClickPose_Neural_Interactive" \
     -c config/clickpose.cfg.py \
-    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=FALSE feedback_inference=FALSE only_correction=FALSE
+    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=FALSE feedback_inference=FALSE only_correction=FALSE \
     --dataset_file="coco"
 ```
 </details>
@@ -224,8 +224,8 @@ export CLICKPOSE_COCO_PATH=/path/to/your/coco_dir
  python -m torch.distributed.launch --nproc_per_node=4 main.py \
     --output_dir "logs/ClickPose_Model-Only_eval" \
     -c config/clickpose.cfg.py \
-    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=FLASE feedback_loop_NOC_test=FALSE feedback_inference=FALSE only_correction=FALSE
-    --dataset_file="coco"
+    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=FLASE feedback_loop_NOC_test=FALSE feedback_inference=FALSE only_correction=FALSE \
+    --dataset_file="coco" \
     --pretrain_model_path "./models/ClickPose_model_only_R50.pth" \
     --eval
 ```
@@ -241,8 +241,8 @@ export CLICKPOSE_NoC_Test="TRUE"
     python -m torch.distributed.launch --nproc_per_node=4 --master_port 3458 main.py \
     --output_dir "logs/ClickPose_Neural_Interactive_eval" \
     -c config/clickpose.cfg.py \
-    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=TRUE feedback_inference=TRUE only_correction=FALSE num_select=20 
-    --dataset_file="coco"
+    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=TRUE feedback_inference=TRUE only_correction=FALSE num_select=20 \
+    --dataset_file="coco" \
     --pretrain_model_path "./models/ClickPose_interactive_R50.pth" \
     --eval
 ```
@@ -260,8 +260,8 @@ do
     python -m torch.distributed.launch --nproc_per_node=4 --master_port 3458 main.py \
     --output_dir "logs/ClickPose_Neural_Interactive_eval" \
     -c config/clickpose.cfg.py \
-    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=FALSE feedback_inference=TRUE only_correction=FALSE num_select=20 
-    --dataset_file="coco"
+    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=FALSE feedback_inference=TRUE only_correction=FALSE num_select=20 \
+    --dataset_file="coco" \
     --pretrain_model_path "./models/ClickPose_interactive_R50.pth" \
     --eval
 done
@@ -282,8 +282,8 @@ export CLICKPOSE_HumanArt_PATH=/path/to/your/humanart_dir
  python -m torch.distributed.launch --nproc_per_node=4 main.py \
     --output_dir "logs/ClickPose_Model-Only_eval" \
     -c config/clickpose.cfg.py \
-    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=FLASE feedback_loop_NOC_test=FALSE feedback_inference=FALSE only_correction=FALSE
-    --dataset_file="humanart"
+    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=FLASE feedback_loop_NOC_test=FALSE feedback_inference=FALSE only_correction=FALSE \
+    --dataset_file="humanart" \
     --pretrain_model_path "./models/ClickPose_model_only_R50.pth" \
     --eval
 ```
@@ -299,8 +299,8 @@ export CLICKPOSE_NoC_Test="TRUE"
     python -m torch.distributed.launch --nproc_per_node=4 --master_port 3458 main.py \
     --output_dir "logs/ClickPose_Neural_Interactive_eval" \
     -c config/clickpose.cfg.py \
-    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=TRUE feedback_inference=TRUE only_correction=FALSE num_select=20 
-    --dataset_file="humanart"
+    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=TRUE feedback_inference=TRUE only_correction=FALSE num_select=20 \
+    --dataset_file="humanart" \
     --pretrain_model_path "./models/ClickPose_interactive_R50.pth" \
     --eval
 ```
@@ -318,8 +318,8 @@ do
     python -m torch.distributed.launch --nproc_per_node=4 --master_port 3458 main.py \
     --output_dir "logs/ClickPose_Neural_Interactive_eval" \
     -c config/clickpose.cfg.py \
-    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=FALSE feedback_inference=TRUE only_correction=FALSE num_select=20 
-    --dataset_file="humanart"
+    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=FALSE feedback_inference=TRUE only_correction=FALSE num_select=20 \
+    --dataset_file="humanart" \
     --pretrain_model_path "./models/ClickPose_interactive_R50.pth" \
     --eval
 done
@@ -340,8 +340,8 @@ export CLICKPOSE_OCHuman_PATH=/path/to/your/ochuman_dir
  python -m torch.distributed.launch --nproc_per_node=4 main.py \
     --output_dir "logs/ClickPose_Model-Only_eval" \
     -c config/clickpose.cfg.py \
-    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=FLASE feedback_loop_NOC_test=FALSE feedback_inference=FALSE only_correction=FALSE
-    --dataset_file="ochuman"
+    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=FLASE feedback_loop_NOC_test=FALSE feedback_inference=FALSE only_correction=FALSE \
+    --dataset_file="ochuman" \
     --pretrain_model_path "./models/ClickPose_model_only_R50.pth" \
     --eval
 ```
@@ -357,8 +357,8 @@ export CLICKPOSE_NoC_Test="TRUE"
     python -m torch.distributed.launch --nproc_per_node=4 --master_port 3458 main.py \
     --output_dir "logs/ClickPose_Neural_Interactive_eval" \
     -c config/clickpose.cfg.py \
-    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=TRUE feedback_inference=TRUE only_correction=FALSE num_select=20 
-    --dataset_file="ochuman"
+    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=TRUE feedback_inference=TRUE only_correction=FALSE num_select=20 \
+    --dataset_file="ochuman" \
     --pretrain_model_path "./models/ClickPose_interactive_R50.pth" \
     --eval
 ```
@@ -376,8 +376,8 @@ do
     python -m torch.distributed.launch --nproc_per_node=4 --master_port 3458 main.py \
     --output_dir "logs/ClickPose_Neural_Interactive_eval" \
     -c config/clickpose.cfg.py \
-    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=FALSE feedback_inference=TRUE only_correction=FALSE num_select=20 
-    --dataset_file="ochuman"
+    --options batch_size=4 epochs=100 lr_drop=80 use_ema=TRUE human_feedback=TRUE feedback_loop_NOC_test=FALSE feedback_inference=TRUE only_correction=FALSE num_select=20 \
+    --dataset_file="ochuman" \
     --pretrain_model_path "./models/ClickPose_interactive_R50.pth" \
     --eval
 done
