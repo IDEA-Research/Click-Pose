@@ -399,10 +399,11 @@ done
 If you find this repository useful for your work, please consider citing it as follows:
 
 ```
-@inproceedings{yang2023nerual,
+@inproceedings{yang2023neural,
   title={Neural Interactive Keypoint Detection},
   author={Yang, Jie and Zeng, Ailing and Li, Feng and Liu, Shilong and Zhang, Ruimao and Zhang, Lei},
-  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={15122--15132},
   year={2023}
 }
 ```
